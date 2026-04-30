@@ -1,0 +1,13 @@
+﻿{
+    // appearance
+    "config.section.Appearance.name": "Външен вид",
+    "config.section.Appearance.description": "Визуални настройки на играта",
+    "config.ThaiInterface.name": "Български интерфейс",
+    "config.ThaiInterface.description": "Табели на магазините и документи в играта на български език",
+    "config.TidyCraftingMenu.name": "Подредено меню за изработка",
+    "config.TidyCraftingMenu.description": "Прави менюто за изработка по-подредено и организирано",
+
+    // details
+    "config.section.Details.name": "Детайли",
+    "config.section.Details.description": "Подробности за активираните елементи. Ако възникне конфликт като:\n\nTwo content packs want to load the 'TileSheets/furniture' ...\n\nизключете опцията 'TileSheets: furniture' по-долу (x означава включено)\nили се свържете с автора на българския превод за съвместимост с други модове."
+}

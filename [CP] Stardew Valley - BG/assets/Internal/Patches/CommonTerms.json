@@ -1,0 +1,80 @@
+{
+    "Changes": [
+        // the text is shown in Junimo language
+        {
+            "Action": "EditData",
+            "Target": "Strings/Locations",
+            "Priority": "Early",
+            "Entries": {
+                "CommunityCenter_AreaName_BoilerRoom": "Boiler Room",
+                "CommunityCenter_AreaName_BulletinBoard": "Bulletin Board",
+                "CommunityCenter_AreaName_CraftsRoom": "Crafts Room",
+                "CommunityCenter_AreaName_FishTank": "Fish Tank",
+                "CommunityCenter_AreaName_Pantry": "Pantry",
+                "CommunityCenter_AreaName_Vault": "Vault",
+                "CommunityCenter_AreaName_AbandonedJojaMart": "Abandoned JojaMart"
+            },
+            "When": {
+                "Language": "bg",
+                "HasFlag |contains=canReadJunimoText": false
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Priority": "Early",
+            "Entries": {
+                "JunimoNoteMenu.cs.10786": "We    the  Junimo are    happy to    aid  you.  In     return we     ask for gifts   of      the valley.    If you   are one     with    forest   magic    then you    will   see    the true    nature   of  this scroll."
+            },
+            "When": {
+                "Language": "bg",
+                "HasFlag |contains=canReadJunimoText": false
+            }
+        },
+        // SDV Android
+        {
+            "Action": "EditData",
+            "Target": "Strings/UI",
+            "Priority": "Early",
+            "Entries": {
+                "Character_Farm": "Име на фермата",
+                "Character_FavoriteThing": "Любимо нещо",
+                "Character_Animal": "Любимо животно",
+                "LevelUp_ProfessionName_Rancher": "Животновъд",
+                "LevelUp_ProfessionName_Tiller": "Земеделец",
+                "LevelUp_ProfessionName_Coopmaster": "Специалист по кокошарници",
+                "LevelUp_ProfessionName_Shepherd": "Овчар",
+                "LevelUp_ProfessionName_Artisan": "Занаятчия",
+                "LevelUp_ProfessionName_Agriculturist": "Агроном",
+                "LevelUp_ProfessionName_Fisher": "Рибар",
+                "LevelUp_ProfessionName_Trapper": "Ловец с капани",
+                "LevelUp_ProfessionName_Angler": "Въдичар",
+                "LevelUp_ProfessionName_Pirate": "Пират",
+                "LevelUp_ProfessionName_Mariner": "Моряк",
+                "LevelUp_ProfessionName_Luremaster": "Майстор на примамките",
+                "LevelUp_ProfessionName_Forester": "Горски",
+                "LevelUp_ProfessionName_Gatherer": "Събирач",
+                "LevelUp_ProfessionName_Lumberjack": "Дървосекач",
+                "LevelUp_ProfessionName_Tapper": "Смолар",
+                "LevelUp_ProfessionName_Botanist": "Ботаник",
+                "LevelUp_ProfessionName_Tracker": "Следотърсач",
+                "LevelUp_ProfessionName_Miner": "Минньор",
+                "LevelUp_ProfessionName_Geologist": "Геолог",
+                "LevelUp_ProfessionName_Blacksmith": "Ковач",
+                "LevelUp_ProfessionName_Prospector": "Търсач на руда",
+                "LevelUp_ProfessionName_Excavator": "Екскаватор",
+                "LevelUp_ProfessionName_Gemologist": "Гемолог",
+                "LevelUp_ProfessionName_Fighter": "Боец",
+                "LevelUp_ProfessionName_Scout": "Разузнавач",
+                "LevelUp_ProfessionName_Brute": "Грубиянин",
+                "LevelUp_ProfessionName_Defender": "Защитник",
+                "LevelUp_ProfessionName_Acrobat": "Акробат",
+                "LevelUp_ProfessionName_Desperado": "Десперадо"
+            },
+            "When": {
+                "Language": "bg",
+                "SupportedSystems |contains=Android": true
+            }
+        }
+    ]
+}

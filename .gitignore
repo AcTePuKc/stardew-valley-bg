@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+.git/
+.github/.DS_Store
+
+dist/
+
+Stardrop/
+hidden_folder/
+UIInfoSuite2/
+UIInfoSuite2Alt.zip

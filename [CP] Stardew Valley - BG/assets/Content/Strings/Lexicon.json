@@ -1,0 +1,22 @@
+{
+  "RandomNegativeItemNoun": "боклук#смет#отпадък#кал#скапана вещ",
+  "RandomPositiveAdjective_Child": "супер#яко#готино#добро#върха#велико#екстра",
+  "RandomPositiveAdjective_AdultMale": "интересно#вълнуващо#прилично#забавно#чудесно#страхотно",
+  "RandomPositiveAdjective_AdultFemale": "прекрасно#страхотно#трогателно#вълшебно#невероятно#сладко#радостно#очарователно",
+  "RandomPositiveAdjective_PlaceOrEvent": "прекрасно#отлично#сърдечно#магическо#невероятно#мило#живописно#приятно",
+  "RandomDeliciousAdjective": "вкусно#възхитително#превъзходно#задоволително#засищащо#апетитно#неустоимо#впечатляващо",
+  "RandomDeliciousAdjective_Child": "ам-ам#вкуснотии",
+  "RandomSlightlyPositiveFoodAdjective": "става#добре е#ядва се",
+  "RandomNegativeFoodAdjective_Child": "фу#гадно#грозно",
+  "RandomNegativeFoodAdjective_Polite": "нещо... интересно#нещо... странно#нещо... различно#нещо... непознато досега",
+  "RandomNegativeFoodAdjective": "лоша храна#бълвоч#отвратително нещо#гнусотия#нещо развалено#гадост#ужасно ястие#лоша работа#нещо вкиснало#кошмарна храна#гнила работа",
+  "ChildTerm_Male": "момче",
+  "ChildTerm_Female": "момиче",
+  "Pronoun_Male": "той",
+  "Pronoun_Female": "тя",
+  "QuestionDialogue_Yes": "Да",
+  "QuestionDialogue_No": "Не",
+  "GenericPlayerTerm": "фермер",
+  "Possessive_Pronoun_Male": "негов",
+  "Possessive_Pronoun_Female": "нейна"
+}

@@ -1,0 +1,8 @@
+{
+  "BGInterface": "true",
+  "TidyCraftingMenu": "true",
+  "LooseSprites": "Billboard, JojaCDForm, JunimoNote",
+  "Maps": "bathhouse_tiles, coopTiles, DesertTiles, fall_beach, fall_outdoorsTileSheet, fall_town, Festivals, samshowtiles, spring_beach, spring_outdoorsTileSheet, spring_town, summer_beach, summer_outdoorsTileSheet, summer_town, TownIndoors, townInterior, winter_beach, winter_outdoorsTileSheet, winter_town",
+  "Minigames": "Intro, jojacorps, TitleButtons",
+  "TileSheets": "furniture"
+}
