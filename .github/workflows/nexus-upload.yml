@@ -1,51 +1,44 @@
-name: Nexus Upload
+name: Package Mod for Release
 
 on:
-  release:
-    types: [published]
   workflow_dispatch:
     inputs:
       mod_key:
-        description: "Which mod to package and upload"
+        description: "Which mod to package"
         required: true
         type: choice
         options:
           - stardew-valley-bg
           - uiinfosuite2alt
       version:
-        description: "Version for manual upload. Leave empty for manifest-based mods."
+        description: "Version for manual packaging. Leave empty for manifest-based mods."
         required: false
         type: string
       changelog:
         description: "Description/changelog for the Nexus file entry"
         required: false
         type: string
-      dry_run:
-        description: "Only package the ZIP and validate config, skip Nexus upload"
+      upload_to_nexus:
+        description: "Attempt direct upload to Nexus Mods"
         required: true
         default: false
         type: boolean
 
 jobs:
-  upload:
+  package:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "8.0.x"
-
       - name: Package mod archive
         id: package
         shell: pwsh
         run: >
           ./scripts/package-mod.ps1
-          -ModKey '${{ github.event_name == 'release' && 'stardew-valley-bg' || inputs.mod_key }}'
-          -VersionOverride '${{ github.event_name == 'release' && github.event.release.tag_name || inputs.version }}'
+          -ModKey '${{ inputs.mod_key }}'
+          -VersionOverride '${{ inputs.version }}'
 
       - name: Upload packaged archive artifact
         uses: actions/upload-artifact@v4
@@ -53,8 +46,16 @@ jobs:
           name: ${{ steps.package.outputs.archive_name }}
           path: ${{ steps.package.outputs.archive_path }}
 
+      - name: Show packaged release summary
+        shell: bash
+        run: |
+          echo "Mod: ${{ steps.package.outputs.label }}"
+          echo "Version: ${{ steps.package.outputs.version }}"
+          echo "Archive: ${{ steps.package.outputs.archive_name }}"
+          echo "File Group ID: ${{ steps.package.outputs.file_group_id }}"
+
       - name: Upload archive to Nexus Mods
-        if: ${{ github.event_name == 'release' || !inputs.dry_run }}
+        if: ${{ inputs.upload_to_nexus }}
         uses: Nexus-Mods/upload-action@main
         with:
           api_key: ${{ secrets.NEXUSMODS_API_KEY }}
