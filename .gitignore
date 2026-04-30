@@ -6,6 +6,7 @@ Desktop.ini
 .github/.DS_Store
 
 dist/
+local-notes/
 
 Stardrop/
 hidden_folder/
