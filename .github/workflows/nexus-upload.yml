@@ -1,6 +1,8 @@
 name: Nexus Upload
 
 on:
+  release:
+    types: [published]
   workflow_dispatch:
     inputs:
       mod_key:
@@ -11,7 +13,7 @@ on:
           - stardew-valley-bg
           - uiinfosuite2alt
       version:
-        description: "Optional version override. Leave empty for manifest-based mods."
+        description: "Version for manual upload. Leave empty for manifest-based mods."
         required: false
         type: string
       changelog:
@@ -42,8 +44,8 @@ jobs:
         shell: pwsh
         run: >
           ./scripts/package-mod.ps1
-          -ModKey '${{ inputs.mod_key }}'
-          -VersionOverride '${{ inputs.version }}'
+          -ModKey '${{ github.event_name == 'release' && 'stardew-valley-bg' || inputs.mod_key }}'
+          -VersionOverride '${{ github.event_name == 'release' && github.event.release.tag_name || inputs.version }}'
 
       - name: Upload packaged archive artifact
         uses: actions/upload-artifact@v4
@@ -51,40 +53,15 @@ jobs:
           name: ${{ steps.package.outputs.archive_name }}
           path: ${{ steps.package.outputs.archive_path }}
 
-      - name: Install Nexus uploader
-        if: ${{ !inputs.dry_run }}
-        run: dotnet tool install --global Digitalroot.ModUploader --version 1.4.3
-
-      - name: Add .NET tools to PATH
-        if: ${{ !inputs.dry_run }}
-        run: echo "$HOME/.dotnet/tools" >> "$GITHUB_PATH"
-
-      - name: Validate Nexus credentials
-        if: ${{ !inputs.dry_run }}
-        env:
-          NEXUSMOD_API_KEY: ${{ secrets.NEXUSMOD_API_KEY }}
-          NEXUSMOD_SESSION_COOKIE: ${{ secrets.NEXUSMOD_SESSION_COOKIE }}
-        run: drmu nx check
-
       - name: Upload archive to Nexus Mods
-        if: ${{ !inputs.dry_run }}
-        env:
-          NEXUSMOD_API_KEY: ${{ secrets.NEXUSMOD_API_KEY }}
-          NEXUSMOD_SESSION_COOKIE: ${{ secrets.NEXUSMOD_SESSION_COOKIE }}
-          NEXUS_MOD_ID: ${{ steps.package.outputs.nexus_mod_id }}
-          ARCHIVE_PATH: ${{ steps.package.outputs.archive_path }}
-          FILE_NAME: ${{ steps.package.outputs.file_name }}
-          VERSION: ${{ steps.package.outputs.version }}
-          CATEGORY: ${{ steps.package.outputs.category }}
-          GAME: ${{ steps.package.outputs.game }}
-          DEFAULT_DESCRIPTION: ${{ steps.package.outputs.description }}
-          CHANGELOG: ${{ inputs.changelog }}
-        shell: bash
-        run: |
-          DESCRIPTION="${CHANGELOG:-$DEFAULT_DESCRIPTION}"
-          drmu nx upload "$NEXUS_MOD_ID" "$ARCHIVE_PATH" \
-            -g "$GAME" \
-            -f "$FILE_NAME" \
-            -v "$VERSION" \
-            -t "$CATEGORY" \
-            -d "$DESCRIPTION"
+        if: ${{ github.event_name == 'release' || !inputs.dry_run }}
+        uses: Nexus-Mods/upload-action@main
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_group_id: ${{ steps.package.outputs.file_group_id }}
+          filename: ${{ steps.package.outputs.archive_path }}
+          display_name: ${{ steps.package.outputs.file_name }}
+          description: ${{ inputs.changelog || steps.package.outputs.description }}
+          version: ${{ steps.package.outputs.version }}
+          file_category: ${{ steps.package.outputs.category }}
+          archive_existing_file: ${{ steps.package.outputs.archive_existing_file }}

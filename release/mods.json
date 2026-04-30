@@ -4,30 +4,30 @@
       "key": "stardew-valley-bg",
       "label": "(CP) Stardew Valley - BG",
       "sourcePath": "[CP] Stardew Valley - BG",
-      "nexusModId": "7357073",
+      "fileGroupId": "7357073",
       "fileName": "(CP) Stardew Valley - BG",
       "archiveBaseName": "CP-Stardew-Valley-BG",
-      "game": "stardewvalley",
-      "category": "Main",
+      "category": "main",
       "versionStrategy": {
         "type": "manifest",
         "manifestPath": "[CP] Stardew Valley - BG/manifest.json"
       },
-      "description": "Bulgarian translation for Stardew Valley."
+      "description": "Bulgarian translation for Stardew Valley.",
+      "archiveExistingFile": true
     },
     {
       "key": "uiinfosuite2alt",
       "label": "UIInfoSuite2Alt",
       "sourcePath": "UIInfoSuite2Alt",
-      "nexusModId": "7365140",
+      "fileGroupId": "7365140",
       "fileName": "UIInfoSuite2Alt - BG",
       "archiveBaseName": "UIInfoSuite2Alt-BG",
-      "game": "stardewvalley",
-      "category": "Optional",
+      "category": "optional",
       "versionStrategy": {
         "type": "manual"
       },
-      "description": "Bulgarian translation for UI Info Suite 2 Alternative."
+      "description": "Bulgarian translation for UI Info Suite 2 Alternative.",
+      "archiveExistingFile": true
     }
   ]
 }

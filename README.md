@@ -100,10 +100,11 @@
 
 GitHub Actions workflow: `.github/workflows/nexus-upload.yml`
 
-Нужни GitHub Secrets:
+Нужен GitHub Secret:
 
-- `NEXUSMOD_API_KEY`
-- `NEXUSMOD_SESSION_COOKIE`
+- `NEXUSMODS_API_KEY`
+
+Не е нужен cookie при официалния `Nexus-Mods/upload-action`.
 
 Пускане:
 
@@ -114,6 +115,10 @@ GitHub Actions workflow: `.github/workflows/nexus-upload.yml`
 5. За `uiinfosuite2alt` подай версия ръчно.
 6. По желание добави `changelog`.
 7. Ако искаш само тест на пакетирането, пусни с `dry_run = true`.
+
+### Автоматично качване при GitHub Release
+
+При публикуване на GitHub Release workflow-ът качва автоматично `stardew-valley-bg` и използва release tag-а като версия.
 
 ---
 

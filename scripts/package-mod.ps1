@@ -70,9 +70,9 @@ if ($env:GITHUB_OUTPUT) {
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "archive_name=$archiveName"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "version=$version"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "file_name=$($mod.fileName)"
-    Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "nexus_mod_id=$($mod.nexusModId)"
-    Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "game=$($mod.game)"
+    Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "file_group_id=$($mod.fileGroupId)"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "category=$($mod.category)"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "label=$($mod.label)"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "description=$($mod.description)"
+    Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "archive_existing_file=$($mod.archiveExistingFile.ToString().ToLowerInvariant())"
 }
