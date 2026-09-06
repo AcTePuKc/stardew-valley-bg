@@ -107,8 +107,8 @@ const file = await expectJson(await api('/mod-files', {
   }),
 }), 'Create first Nexus mod file');
 
-const fileId = file?.data?.id;
-if (!fileId) throw new Error('Nexus created a file but returned no file ID. Inspect the Nexus page before retrying.');
+const fileId = file?.data?.game_scoped_id;
+if (!fileId) throw new Error('Nexus created a file but returned no game-scoped file ID. Inspect the Nexus page before retrying.');
 console.log(`Created Nexus file ID: ${fileId}`);
 if (process.env.GITHUB_STEP_SUMMARY) {
   fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `## Nexus bootstrap upload\n\nCreated the first Nexus file. Add this value as the matching \`NEXUS_FILE_ID_*\` GitHub secret before the next release:\n\n- **Nexus File ID:** \`${fileId}\`\n`);
