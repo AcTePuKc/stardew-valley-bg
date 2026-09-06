@@ -27,6 +27,7 @@ jobs:
         run: ./scripts/resolve-release-tag.ps1 -Tag '${{ github.event.release.tag_name }}'
 
       - name: Validate Nexus release configuration
+        if: ${{ steps.mod.outputs.nexus_published == 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -49,6 +50,7 @@ jobs:
         run: ./scripts/package-mod.ps1 -ModKey '${{ steps.mod.outputs.key }}' -VersionOverride '${{ steps.mod.outputs.version }}'
 
       - name: Load Nexus file configuration
+        if: ${{ steps.mod.outputs.nexus_published == 'true' }}
         id: nexus
         shell: bash
         env:
@@ -73,6 +75,7 @@ jobs:
         run: gh release upload '${{ github.event.release.tag_name }}' '${{ steps.package.outputs.archive_path }}' --clobber
 
       - name: Validate Nexus page before upload
+        if: ${{ steps.mod.outputs.nexus_published == 'true' }}
         shell: bash
         env:
           NEXUS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
@@ -90,7 +93,7 @@ jobs:
           fi
 
       - name: Bootstrap the first Nexus file
-        if: ${{ steps.nexus.outputs.has_file == 'false' }}
+        if: ${{ steps.mod.outputs.nexus_published == 'true' && steps.nexus.outputs.has_file == 'false' }}
         env:
           NEXUS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
           NEXUS_GAME_DOMAIN: ${{ steps.mod.outputs.nexus_game_domain }}
@@ -102,7 +105,7 @@ jobs:
         run: node .github/scripts/nexus-bootstrap-upload.mjs
 
       - name: Update existing Nexus file
-        if: ${{ steps.nexus.outputs.has_file == 'true' }}
+        if: ${{ steps.mod.outputs.nexus_published == 'true' && steps.nexus.outputs.has_file == 'true' }}
         uses: Nexus-Mods/upload-action@c96019556046053aa26044b44396cd38929daf23
         with:
           api_key: ${{ secrets.NEXUSMODS_API_KEY }}
