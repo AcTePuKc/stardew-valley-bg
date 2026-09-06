@@ -4,6 +4,12 @@
       "key": "stardew-valley-bg",
       "label": "(CP) Stardew Valley - BG",
       "sourcePath": "[CP] Stardew Valley - BG",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_BG_LOCAL",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_BG_LOCAL",
+      "nexusPublished": true,
+      "changelogPath": "[CP] Stardew Valley - BG/changelog.txt",
+      "nexusDescriptionPath": "[CP] Stardew Valley - BG/Stardew-Valley-BG.bbcode",
       "fileGroupId": "7357073",
       "fileName": "(CP) Stardew Valley - BG",
       "archiveBaseName": "CP-Stardew-Valley-BG",
@@ -19,6 +25,12 @@
       "key": "uiinfosuite2alt",
       "label": "UIInfoSuite2Alt",
       "sourcePath": "UIInfoSuite2Alt",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_UIINFOSUITE2ALT_BG",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_UIINFOSUITE2ALT_BG",
+      "nexusPublished": false,
+      "changelogPath": "UIInfoSuite2Alt/changelog.txt",
+      "nexusDescriptionPath": "UIInfoSuite2Alt/UIInfoSuite2Alt.bbcode",
       "fileGroupId": "7365140",
       "fileName": "UIInfoSuite2Alt - BG",
       "archiveBaseName": "UIInfoSuite2Alt-BG",
@@ -28,6 +40,46 @@
       },
       "description": "Bulgarian translation for UI Info Suite 2 Alternative.",
       "archiveExistingFile": true
+    },
+    {
+      "key": "seed-info-bg",
+      "label": "Seed Info - Bulgarian Translation",
+      "sourcePath": "mods/seed-info/SeedInfo",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": null,
+      "nexusFileIdSecret": null,
+      "nexusPublished": false,
+      "changelogPath": "mods/seed-info/changelog.txt",
+      "nexusDescriptionPath": "mods/seed-info/SeedInfo.bbcode",
+      "fileGroupId": null,
+      "fileName": "Seed Info - Bulgarian Translation",
+      "archiveBaseName": "Seed-Info-BG",
+      "category": "optional",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Seed Info.",
+      "archiveExistingFile": false
+    },
+    {
+      "key": "generic-mod-config-menu-bg",
+      "label": "Generic Mod Config Menu - Bulgarian Translation",
+      "sourcePath": "mods/generic-mod-config-menu/GenericModConfigMenu",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_GMCM_BG",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_GMCM_BG",
+      "nexusPublished": true,
+      "changelogPath": "mods/generic-mod-config-menu/changelog.txt",
+      "nexusDescriptionPath": "mods/generic-mod-config-menu/GenericModConfigMenu.bbcode",
+      "fileGroupId": null,
+      "fileName": "Generic Mod Config Menu - Bulgarian Translation",
+      "archiveBaseName": "Generic-Mod-Config-Menu-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Generic Mod Config Menu.",
+      "archiveExistingFile": false
     }
   ]
 }

@@ -18,6 +18,10 @@ if (-not $mod) {
     throw "Unknown mod key '$ModKey'."
 }
 
+if ($null -eq $mod.nexusPublished) {
+    throw "Mod '$ModKey' must declare whether it is Nexus-published in release\\mods.json."
+}
+
 function Resolve-Version {
     param(
         [object]$ModConfig,
@@ -75,4 +79,5 @@ if ($env:GITHUB_OUTPUT) {
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "label=$($mod.label)"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "description=$($mod.description)"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "archive_existing_file=$($mod.archiveExistingFile.ToString().ToLowerInvariant())"
+    Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "nexus_published=$($mod.nexusPublished.ToString().ToLowerInvariant())"
 }

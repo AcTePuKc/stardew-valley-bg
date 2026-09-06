@@ -1,0 +1,19 @@
+{
+  "button.mod-options": "Опции на модовете",
+  "list.editable-heading": "Конфигуриране на модове",
+  "list.not-editable-heading": "Редактируеми от началното меню:",
+  "list.keybinds": "Бутони",
+  "config.buttons.cancel": "Отказ",
+  "config.buttons.reset-to-default": "Стандартни",
+  "config.buttons.save": "Запази",
+  "config.buttons.save-and-close": "Запази и затвори",
+  "config.rebind-key.title": "Промяна на бутон: {{optionName}}",
+  "config.rebind-key.simple-instructions": "Натисни клавиш, за да го зададеш.",
+  "config.rebind-key.combo-instructions": "Натисни клавишна комбинация, за да я зададеш.",
+  "config.rebind-key.no-key": "(Няма)",
+  "config.rebind-key.keybind-list": "Бутони:",
+  "options.open-menu-key.name": "Бутон за отваряне на менюто",
+  "options.open-menu-key.desc": "Клавиш, който отваря това меню.",
+  "options.scroll-speed.name": "Скорост на превъртане",
+  "options.scroll-speed.desc": "Броят редове, с които се измества менюто при превъртане."
+}

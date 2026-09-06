@@ -12,3 +12,8 @@ Stardrop/
 hidden_folder/
 UIInfoSuite2/
 UIInfoSuite2Alt.zip
+
+# Local source copies, experiments, and third-party reference material.
+# These folders must never be included in a release or commit by accident.
+_work/
+_references/

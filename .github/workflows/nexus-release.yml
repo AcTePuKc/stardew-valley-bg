@@ -1,0 +1,116 @@
+name: Publish GitHub Release to Nexus
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nexus-publish-${{ github.event.release.tag_name }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the release tag
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.release.tag_name }}
+
+      - name: Resolve mod from release tag
+        id: mod
+        shell: pwsh
+        run: ./scripts/resolve-release-tag.ps1 -Tag '${{ github.event.release.tag_name }}'
+
+      - name: Validate Nexus release configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ '${{ steps.mod.outputs.nexus_published }}' != 'true' ]]; then
+            echo "Nexus publishing is disabled for '${{ steps.mod.outputs.key }}'." >&2
+            exit 1
+          fi
+          if [[ -z '${{ steps.mod.outputs.nexus_game_domain }}' || -z '${{ steps.mod.outputs.nexus_mod_id_secret }}' ]]; then
+            echo "The Nexus game domain or mod-ID secret name is missing for '${{ steps.mod.outputs.key }}'." >&2
+            exit 1
+          fi
+          if [[ -z '${{ secrets.NEXUSMODS_API_KEY }}' ]]; then
+            echo "NEXUSMODS_API_KEY is missing." >&2
+            exit 1
+          fi
+
+      - name: Package release archive
+        id: package
+        shell: pwsh
+        run: ./scripts/package-mod.ps1 -ModKey '${{ steps.mod.outputs.key }}' -VersionOverride '${{ steps.mod.outputs.version }}'
+
+      - name: Load Nexus file configuration
+        id: nexus
+        shell: bash
+        env:
+          NEXUS_MOD_ID: ${{ secrets[steps.mod.outputs.nexus_mod_id_secret] }}
+          NEXUS_FILE_ID: ${{ secrets[steps.mod.outputs.nexus_file_id_secret] }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$NEXUS_MOD_ID" ]]; then
+            echo "The configured Nexus mod-ID secret is missing or empty. No file upload was attempted." >&2
+            exit 1
+          fi
+          if [[ -n "$NEXUS_FILE_ID" ]]; then
+            echo "has_file=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_file=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Attach archive to GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: gh release upload '${{ github.event.release.tag_name }}' '${{ steps.package.outputs.archive_path }}' --clobber
+
+      - name: Validate Nexus page before upload
+        shell: bash
+        env:
+          NEXUS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
+          NEXUS_GAME_DOMAIN: ${{ steps.mod.outputs.nexus_game_domain }}
+          NEXUS_MOD_ID: ${{ secrets[steps.mod.outputs.nexus_mod_id_secret] }}
+        run: |
+          set -euo pipefail
+          status=$(curl --silent --show-error --output nexus-mod.json --write-out '%{http_code}' \
+            --header "apikey: $NEXUS_API_KEY" \
+            "https://api.nexusmods.com/v3/games/$NEXUS_GAME_DOMAIN/mods/$NEXUS_MOD_ID")
+          if [[ "$status" != "200" ]]; then
+            echo "Nexus page preflight returned HTTP $status. No file upload was attempted." >&2
+            cat nexus-mod.json >&2 || true
+            exit 1
+          fi
+
+      - name: Bootstrap the first Nexus file
+        if: ${{ steps.nexus.outputs.has_file == 'false' }}
+        env:
+          NEXUS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
+          NEXUS_GAME_DOMAIN: ${{ steps.mod.outputs.nexus_game_domain }}
+          NEXUS_MOD_ID: ${{ secrets[steps.mod.outputs.nexus_mod_id_secret] }}
+          RELEASE_ASSET: ${{ steps.package.outputs.archive_path }}
+          MOD_VERSION: ${{ steps.package.outputs.version }}
+          MOD_DISPLAY_NAME: ${{ steps.package.outputs.file_name }}
+          MOD_DESCRIPTION: ${{ steps.package.outputs.description }}
+        run: node .github/scripts/nexus-bootstrap-upload.mjs
+
+      - name: Update existing Nexus file
+        if: ${{ steps.nexus.outputs.has_file == 'true' }}
+        uses: Nexus-Mods/upload-action@c96019556046053aa26044b44396cd38929daf23
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_id: ${{ secrets[steps.mod.outputs.nexus_file_id_secret] }}
+          filename: ${{ steps.package.outputs.archive_path }}
+          version: ${{ steps.package.outputs.version }}
+          display_name: ${{ steps.package.outputs.file_name }}
+          description: ${{ steps.package.outputs.description }}
+          category: ${{ steps.package.outputs.category }}
+          archive_existing_version: false
+          update_mod_version: true

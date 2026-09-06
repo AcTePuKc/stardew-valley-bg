@@ -1,4 +1,4 @@
-name: Package Mod for Release
+name: Package Mod
 
 on:
   workflow_dispatch:
@@ -6,23 +6,11 @@ on:
       mod_key:
         description: "Which mod to package"
         required: true
-        type: choice
-        options:
-          - stardew-valley-bg
-          - uiinfosuite2alt
+        type: string
       version:
         description: "Version for manual packaging. Leave empty for manifest-based mods."
         required: false
         type: string
-      changelog:
-        description: "Description/changelog for the Nexus file entry"
-        required: false
-        type: string
-      upload_to_nexus:
-        description: "Attempt direct upload to Nexus Mods"
-        required: true
-        default: false
-        type: boolean
 
 jobs:
   package:
@@ -30,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Package mod archive
         id: package
@@ -46,23 +34,9 @@ jobs:
           name: ${{ steps.package.outputs.archive_name }}
           path: ${{ steps.package.outputs.archive_path }}
 
-      - name: Show packaged release summary
+      - name: Show package summary
         shell: bash
         run: |
           echo "Mod: ${{ steps.package.outputs.label }}"
           echo "Version: ${{ steps.package.outputs.version }}"
           echo "Archive: ${{ steps.package.outputs.archive_name }}"
-          echo "File Group ID: ${{ steps.package.outputs.file_group_id }}"
-
-      - name: Upload archive to Nexus Mods
-        if: ${{ inputs.upload_to_nexus }}
-        uses: Nexus-Mods/upload-action@main
-        with:
-          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
-          file_group_id: ${{ steps.package.outputs.file_group_id }}
-          filename: ${{ steps.package.outputs.archive_path }}
-          display_name: ${{ steps.package.outputs.file_name }}
-          description: ${{ inputs.changelog || steps.package.outputs.description }}
-          version: ${{ steps.package.outputs.version }}
-          file_category: ${{ steps.package.outputs.category }}
-          archive_existing_file: ${{ steps.package.outputs.archive_existing_file }}
