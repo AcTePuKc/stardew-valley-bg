@@ -17,8 +17,14 @@ Create the Nexus mod page first. Then set `nexusPublished` to `true` and add
 its site-visible page number as the matching `NEXUS_MOD_ID_*` GitHub secret.
 Leave the matching `NEXUS_FILE_ID_*` secret absent.
 
-The first GitHub Release uploads the first Nexus file and prints its ID in the
-Actions summary. Add that value as the matching `NEXUS_FILE_ID_*` GitHub secret
-before publishing the next version. Future releases update only that file.
+The first GitHub Release uploads the first Nexus file. Before publishing the
+next version, open the Nexus Files page and add its actual file-group ID as the
+matching `NEXUS_FILE_ID_*` GitHub secret. Do not copy the temporary
+`Created Nexus file ID` value printed by the bootstrap log: Nexus exposes a
+different identifier for updating an existing file.
+
+Treat this as a release checklist item. No update tag should be created until
+both the page secret (`NEXUS_MOD_ID_*`) and the existing-file secret
+(`NEXUS_FILE_ID_*`) are present.
 
 The sole required GitHub secret is `NEXUSMODS_API_KEY`.
