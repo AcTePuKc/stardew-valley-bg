@@ -200,6 +200,66 @@
       },
       "description": "Bulgarian translation for Train Info.",
       "archiveExistingFile": false
+    },
+    {
+      "key": "anything-anywhere-bg",
+      "label": "Anything Anywhere - Bulgarian Translation",
+      "sourcePath": "mods/anything-anywhere/AnythingAnywhere",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_ANYTHING_ANYWHERE_BG",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_ANYTHING_ANYWHERE_BG",
+      "nexusPublished": true,
+      "changelogPath": "mods/anything-anywhere/changelog.txt",
+      "nexusDescriptionPath": "mods/anything-anywhere/AnythingAnywhere.bbcode",
+      "fileGroupId": null,
+      "fileName": "Anything Anywhere - BG",
+      "archiveBaseName": "Anything-Anywhere-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Anything Anywhere.",
+      "archiveExistingFile": false
+    },
+    {
+      "key": "space-core-bg",
+      "label": "SpaceCore - Bulgarian Translation",
+      "sourcePath": "mods/space-core/SpaceCore",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_SPACECORE_BG",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_SPACECORE_BG",
+      "nexusPublished": true,
+      "changelogPath": "mods/space-core/changelog.txt",
+      "nexusDescriptionPath": "mods/space-core/SpaceCore.bbcode",
+      "fileGroupId": null,
+      "fileName": "SpaceCore - BG",
+      "archiveBaseName": "SpaceCore-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for SpaceCore.",
+      "archiveExistingFile": false
+    },
+    {
+      "key": "cloudy-skies-bg",
+      "label": "Cloudy Skies - Bulgarian Translation",
+      "sourcePath": "mods/cloudy-skies/CloudySkies",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_CLOUDY_SKIES_BG",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_CLOUDY_SKIES_BG",
+      "nexusPublished": true,
+      "changelogPath": "mods/cloudy-skies/changelog.txt",
+      "nexusDescriptionPath": "mods/cloudy-skies/CloudySkies.bbcode",
+      "fileGroupId": null,
+      "fileName": "Cloudy Skies - BG",
+      "archiveBaseName": "Cloudy-Skies-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Cloudy Skies.",
+      "archiveExistingFile": false
     }
   ]
 }

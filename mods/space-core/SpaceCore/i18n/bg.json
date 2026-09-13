@@ -1,0 +1,19 @@
+{
+  "config.custom-skill-page.name": "Страница с допълнителни умения",
+  "config.custom-skill-page.tooltip": "Дали да се показва страницата с допълнителните умения.\nТова ще премести портфейла, за да има място за още умения.",
+  "config.support-all-professions-mod.name": "Поддръжка на мода All Professions",
+  "config.support-all-professions-mod.tooltip": "Когато All Professions е инсталиран, автоматично прилага допълнителните професии, регистрирани чрез SpaceCore, при достигане на съответното ниво.",
+  "config.advanced-social-interactions": "Разширени социални взаимодействия",
+  "config.always-trigger.name": "Постоянно задействане",
+  "config.always-trigger.description": "Дали менюто винаги да се отваря при взаимодействие с NPC.",
+  "config.trigger-modifier.name": "Клавиш-модификатор за задействане",
+  "config.trigger-modifier.description": "Клавишът, който да задържиш при взаимодействие с някого, за да отвориш менюто за разширени взаимодействия.",
+  "interaction-with": "Взаимодействие с {{npc}}",
+  "interaction.chat": "Разговор",
+  "interaction.gift-held": "Подари държания предмет",
+  "interaction.cancel": "Отказ",
+  "question.ask": "Задай въпрос",
+  "health-regen": "Здраве в секунда",
+  "stamina-regen": "Енергия в секунда",
+  "resource-clump.bad-tool-tier": "Нивото на инструмента ти не е достатъчно високо, за да разбие това."
+}
