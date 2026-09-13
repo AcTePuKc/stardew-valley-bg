@@ -24,13 +24,13 @@
     {
       "key": "uiinfosuite2alt",
       "label": "UIInfoSuite2Alt",
-      "sourcePath": "UIInfoSuite2Alt",
+      "sourcePath": "mods/ui-info-suite-2-alt/UIInfoSuite2Alt",
       "nexusGameDomain": "stardewvalley",
       "nexusModIdSecret": null,
       "nexusFileIdSecret": null,
       "nexusPublished": false,
-      "changelogPath": "UIInfoSuite2Alt/changelog.txt",
-      "nexusDescriptionPath": "UIInfoSuite2Alt/UIInfoSuite2Alt.bbcode",
+      "changelogPath": "mods/ui-info-suite-2-alt/changelog.txt",
+      "nexusDescriptionPath": "mods/ui-info-suite-2-alt/UIInfoSuite2Alt.bbcode",
       "fileGroupId": "7365140",
       "fileName": "UIInfoSuite2Alt - BG",
       "archiveBaseName": "UIInfoSuite2Alt-BG",
@@ -79,6 +79,46 @@
         "type": "manual"
       },
       "description": "Bulgarian translation for Generic Mod Config Menu.",
+      "archiveExistingFile": false
+    },
+    {
+      "key": "crop-watering-bubbles-continued-bg",
+      "label": "Crop Watering Bubbles Continued - Bulgarian Translation",
+      "sourcePath": "mods/crop-watering-bubbles/CropWateringBubbles",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_CWBC_BG",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_CWBC_BG",
+      "nexusPublished": true,
+      "changelogPath": "mods/crop-watering-bubbles/changelog.txt",
+      "nexusDescriptionPath": "mods/crop-watering-bubbles/CropWateringBubbles.bbcode",
+      "fileGroupId": null,
+      "fileName": "Crop Watering Bubbles Continued - Bulgarian Translation",
+      "archiveBaseName": "Crop-Watering-Bubbles-Continued-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Crop Watering Bubbles Continued.",
+      "archiveExistingFile": false
+    },
+    {
+      "key": "yet-another-fishing-mod-bg",
+      "label": "Yet Another Fishing Mod - Bulgarian Translation",
+      "sourcePath": "mods/yet-another-fishing-mod/YetAnotherFishingMod",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_YAFM_BG",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_YAFM_BG",
+      "nexusPublished": true,
+      "changelogPath": "mods/yet-another-fishing-mod/changelog.txt",
+      "nexusDescriptionPath": "mods/yet-another-fishing-mod/YetAnotherFishingMod.bbcode",
+      "fileGroupId": null,
+      "fileName": "Yet Another Fishing Mod - Bulgarian Translation",
+      "archiveBaseName": "Yet-Another-Fishing-Mod-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Yet Another Fishing Mod.",
       "archiveExistingFile": false
     }
   ]
