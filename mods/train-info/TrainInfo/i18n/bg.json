@@ -1,0 +1,8 @@
+{
+  "config.option.notification_time.name": "Час на известието за утрешния влак",
+  "config.option.notification_time.description": "Кога да се показва известието, че утре ще премине влак.",
+  "list_title": "Съдържание на влака",
+  "train_today": "Днес през Долината Стардю ще премине влак в {{time}}.",
+  "train_tomorrow": "Утре през Долината Стардю ще премине влак в {{time}}.",
+  "empty_train": "Няма"
+}

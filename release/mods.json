@@ -160,6 +160,46 @@
       },
       "description": "Bulgarian translation for Almanac.",
       "archiveExistingFile": false
+    },
+    {
+      "key": "bigger-backpack-bg",
+      "label": "Bigger Backpack - Bulgarian Translation",
+      "sourcePath": "mods/bigger-backpack/BiggerBackpack",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": null,
+      "nexusFileIdSecret": null,
+      "nexusPublished": false,
+      "changelogPath": "mods/bigger-backpack/changelog.txt",
+      "nexusDescriptionPath": "mods/bigger-backpack/BiggerBackpack.bbcode",
+      "fileGroupId": null,
+      "fileName": "Bigger Backpack - BG",
+      "archiveBaseName": "Bigger-Backpack-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Bigger Backpack.",
+      "archiveExistingFile": false
+    },
+    {
+      "key": "train-info-bg",
+      "label": "Train Info - Bulgarian Translation",
+      "sourcePath": "mods/train-info/TrainInfo",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": null,
+      "nexusFileIdSecret": null,
+      "nexusPublished": false,
+      "changelogPath": "mods/train-info/changelog.txt",
+      "nexusDescriptionPath": "mods/train-info/TrainInfo.bbcode",
+      "fileGroupId": null,
+      "fileName": "Train Info - BG",
+      "archiveBaseName": "Train-Info-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Train Info.",
+      "archiveExistingFile": false
     }
   ]
 }
