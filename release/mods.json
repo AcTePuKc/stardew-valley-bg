@@ -120,6 +120,46 @@
       },
       "description": "Bulgarian translation for Yet Another Fishing Mod.",
       "archiveExistingFile": false
+    },
+    {
+      "key": "better-game-menu-bg",
+      "label": "Better Game Menu - Bulgarian Translation",
+      "sourcePath": "mods/better-game-menu/BetterGameMenu",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": null,
+      "nexusFileIdSecret": null,
+      "nexusPublished": false,
+      "changelogPath": "mods/better-game-menu/changelog.txt",
+      "nexusDescriptionPath": "mods/better-game-menu/BetterGameMenu.bbcode",
+      "fileGroupId": null,
+      "fileName": "Better Game Menu - BG",
+      "archiveBaseName": "Better-Game-Menu-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Better Game Menu.",
+      "archiveExistingFile": false
+    },
+    {
+      "key": "almanac-bg",
+      "label": "Almanac - Bulgarian Translation",
+      "sourcePath": "mods/almanac/Almanac",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": null,
+      "nexusFileIdSecret": null,
+      "nexusPublished": false,
+      "changelogPath": "mods/almanac/changelog.txt",
+      "nexusDescriptionPath": "mods/almanac/Almanac.bbcode",
+      "fileGroupId": null,
+      "fileName": "Almanac - BG",
+      "archiveBaseName": "Almanac-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Almanac.",
+      "archiveExistingFile": false
     }
   ]
 }

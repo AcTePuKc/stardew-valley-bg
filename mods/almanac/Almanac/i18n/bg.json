@@ -1,0 +1,420 @@
+{
+	"mod-name": "Almanac",
+
+	"almanac.open": "Отвори Алманаха",
+
+	"almanac.cover": "Земеделски\nалманах на\nФърнгил",
+	"almanac.cover-island": "Земеделски\nалманах на\nФърнгил и\nФърнските острови",
+
+	"calendar.when": "{{season}}, година {{year}}",
+
+	"calendar.day.1": "П",
+	"calendar.day.2": "В",
+	"calendar.day.3": "С",
+	"calendar.day.4": "Ч",
+	"calendar.day.5": "П",
+	"calendar.day.6": "С",
+	"calendar.day.7": "Н",
+
+	"page.crops": "Дати за засаждане",
+
+	"crop.last-day": "Последен ден за:",
+
+	"crop.toggle": "Превключи {{mode}}",
+	"crop.paddy": "Бонус от оризище",
+
+	"page.crop.none": "Няма култури, които да отговарят на текущите филтри.",
+
+	"page.crop.seed-filter": "Филтър по семена",
+	"page.crop.seed-filter.disabled": "Изключен",
+	"page.crop.seed-filter.inventory": "В инвентара",
+	"page.crop.seed-filter.owned": "Притежавани",
+
+	"crop.seed-filter": "Показвай само притежавани семена",
+
+	"crop.using-none": "Следните времена и дати на растеж предполагат, че нямаш тор или умения.",
+	"crop.using-agri": "Следните времена и дати на растеж предполагат, че си {{agriculturist}}.",
+	"crop.using-speed": "Следните времена и дати на растеж предполагат, че използваш {{fertilizer}}.",
+	"crop.using-both": "Следните времена и дати на растеж предполагат, че си {{agriculturist}} и използваш {{fertilizer}}.",
+	"crop.using-paddy": "Също така се предполага, че културите, които се възползват от това, са @Bзасадени близо до вода@b.",
+
+	"crop.grow-time": "Расте за {{count}} дни.",
+	"crop.harvests": "Очакват се {{count}} реколти тази година.",
+	"crop.harvests-date": "Очакват се {{count}} реколти тази година, ако се засади на {{date}}.",
+	"crop.last-date": "Засади не по-късно от {{date}}.",
+	"crop.regrow-time": "Израства отново на всеки {{count}} дни.",
+	"crop.paddy-note": "Расте по-бързо близо до вода.",
+	"crop.giant-note": "Може да достигне {{link}}.",
+	"crop.giant-hover": "@Bгигантски размери@b",
+	"crop.trellis-note": "Изисква подпорна конструкция (пергола).",
+
+	"page.weather": "Прогноза за времето",
+	"page.weather-island": "Прогноза за Острова на джинджифила",
+
+	"page.weather.pirates": "Гилдията на приключенците предупреждава, че се очаква пиратска активност на или около Острова на джинджифила на следните дати:",
+
+	"festival.about": "Следните фестивали са планирани да се проведат в района на Долината Стардю през сезон {{season}}:",
+
+	"festival.when": "Кога:",
+	"festival.when-times": "от {{start}} до {{end}}",
+	"festival.where": "Къде:",
+	"festival.date": "Дата:",
+
+	"weather.sunny": "Слънчево",
+	"weather.rain": "Дъждовно",
+	"weather.debris": "Ветровито",
+	"weather.lightning": "Гръмотевични бури",
+	"weather.festival": "Слънчево",
+	"weather.snow": "Снежно",
+	"weather.green": "Зелен дъжд",
+
+	"page.train": "Разписание на влаковете",
+	"page.train.about": "@BВнимание:@b Влаковете ще преминават през гара Долината Стардю в следните часове. За твоя безопасност, винаги стойте далеч от релсите, когато има влак.",
+
+	"page.train.notice": "Движението на влаковете до гара Долината Стардю е преустановено през цялата пролет поради планирана поддръжка на релсите.",
+
+	"page.fortune": "Предсказания",
+	"page.fortune.about": "Ето какво може да се случи през {{Season}}, а може и да не се случи.",
+	"page.fortune.garbage-hat": "Боклукът за един е съкровище за друг.",
+
+	"page.fortune.luck-awful": "Разгневените духове ще направят живота ви труден.",
+	"page.fortune.luck-bad": "Раздразнените духове няма да донесат късмет на никого.",
+	"page.fortune.luck-neutral": "Духовете ще бъдат в идеален баланс. Денят е във вашите ръце.",
+	"page.fortune.luck-good": "Добродушните духове ще донесат допълнителен късмет.",
+	"page.fortune.luck-great": "Щастливите духове ще обсипят всички с благодат.",
+
+	"page.fortune.event.none": "Очаквайте спокоен сезон. Трябва да намерите вълнението в себе си и да търсите радостта в ежедневието.",
+
+	"page.fortune.event.fairy": "Добронамерена фея ще премине през нощта. Тези с добър късмет може да открият богата реколта, която ги очаква.",
+	"page.fortune.event.witch": "Очаква се вещици да преминат през района тази вечер.",
+	"page.fortune.event.meteorite": "Очакват се метеоритни дъждове в целия Фърнгил.",
+	"page.fortune.event.owl": "Обвити в мистерия, каменни пазители се спускат над долината.",
+	"page.fortune.event.ufo": "Странни същества отвъд небето прелитат над Фърнгил.",
+
+	"page.mines": "Подземията",
+	"page.mines.about": "Следното е резюме на предвидената активност на чудовища през сезон {{Season}}:",
+
+	"page.mines.type.Mushroom": "Гъби",
+	"page.mines.type.InfestedMonster": "Инфестация (чудовища)",
+	"page.mines.type.InfestedSlime": "Инфестация (слаймове)",
+	"page.mines.type.Quarry": "Кариера",
+	"page.mines.type.InfestedQuarry": "Инфестация (кариера)",
+	"page.mines.type.Dino": "Пещерни динозаври",
+
+	"page.error": "Грешка",
+	"page.error.desc": "Възникна грешка на тази страница от менюто. Провери лога на играта за повече подробности.",
+
+	"page.notices": "Местни известия",
+
+	"page.notices.birthday-error": "Възникна грешка при зареждането на списъка с герои. Рождените дни не могат да бъдат показани. Провери лога за повече подробности.",
+
+	"page.notices.season": "Сезонът за {{item}} продължава от {{start}} до {{end}}.",
+	"page.notices.summer": "Очаква се летните океански течения да донесат допълнителни отломки на плажа в Град Пеликан от 12-ти до 14-ти.",
+	"page.notices.passive-festival": "{{name}} е отворен от {{startTime}} на {{startDay}} до {{endDay}}.",
+
+	"page.notices.anniversary.no-s": "Днес е годишнината на {{name}} и {{spouse}}!",
+	"page.notices.anniversary.s": "Днес е годишнината на {{name}} и {{spouse}}!",
+
+	"page.notices.wedding.no-s": "Днес е сватбеният ден на {{name}} и {{spouse}}!",
+	"page.notices.wedding.s": "Днес е сватбеният ден на {{name}} и {{spouse}}!",
+
+	"page.notices.festival": "Време е за {{name}}! Присъедини се към нас в {{where}} от {{start}} до {{end}}.",
+
+	"page.notices.birthday.no-s": "Днес е рожденият ден на {{name}}!",
+	"page.notices.birthday.s": "Днес е рожденият ден на {{name}}!",
+
+	"page.notices.merchant": "Пътуващият търговец ще бъде в града.",
+	"page.notices.merchant.stock": "Пътуващият търговец ще продава:",
+	"page.notices.bookseller": "Продавачът на книги ще бъде в града.",
+	"page.notices.bookseller.stock": "Продавачът на книги ще продава:",
+
+	"page.notices.train": "Влак ще премине през гарата в {{time}}.",
+	// Fishing Page
+
+	"page.fish": "Риболов",
+	"page.fish.aquarium.none": "Това не може да бъде поставено в аквариум.",
+	"page.fish.caught": "${Уловил^Уловила} си @B{{count}}@b броя от това.",
+	"page.fish.caught.not": "Не е улавяно това преди.",
+
+	// TL Note: You can use {{big_cm}}, {{min_cm}}, and {{max_cm}} instead of _inch.
+	"page.fish.size": "Най-големият ти улов е @B{{big_cm}} см@b.",
+	"page.fish.size.range": "Расте от @B{{min_cm}} см@b до @B{{max_cm}} см@b.",
+
+	"page.fish.weather.Sunny": "{{fish}} е активна само в @Bслънчево@b време.",
+	"page.fish.weather.Rainy": "{{fish}} е активна само в @Bдъждовно@b време.",
+	"page.fish.weather.Any": "{{fish}} се среща винаги, без значение от времето.",
+	"page.fish.level": "Нуждаеш се от ниво @B{{level}}@b на умението {{skill}}, за да уловиш това.",
+	"page.fish.legendary": "{{fish}} има легендарен статус.",
+	"page.fish.time.all": "Намира се по всяко време на денонощието.",
+	"page.fish.time": "Намира се от @B{{start}}@b до @B{{end}}@b.",
+	"page.fish.time.many": "Активна е в следните часови интервали: {{spans}}.",
+	"page.fish.time.range": "@B{{start}}@b до @B{{end}}@b",
+	"page.fish.locations": "Местоположения",
+	"page.fish.seasons.all": "Всички сезони",
+	"page.fish.locations.none": "Тази риба няма данни за местоположение.",
+	"page.fish.pond": "Рибовъдство",
+	"page.fish.pond.none": "{{fish}} не може да се отглежда в рибарник.",
+	"page.fish.pond.start": "",
+	"page.fish.filter.weather": "Филтър по време",
+	"page.fish.filter.none": "Без филтър",
+	"page.fish.none": "Няма риби, които да отговарят на текущите филтри.",
+	"page.fish.nothing": "Няма нищо за гледане тук...",
+	"fish.weather.Any": "Всякакво",
+	"fish.weather.Rainy": "Дъждовно",
+	"fish.weather.Sunny": "Слънчево",
+	"page.fish.filter.type": "Филтър по тип",
+	"page.fish.filter.type.trap": "Капан (кош за раци)",
+	"page.fish.filter.type.caught": "Риболов (въдица)",
+	"page.fish.filter.caught": "Филтър по уловени",
+	"page.fish.filter.true": "Да",
+	"page.fish.filter.false": "Не",
+	"page.fish.filter.location": "Филтър по текуща локация",
+	"page.fish.filter.now": "Да, този сезон",
+	"page.fish.location.fresh": "{{fish}} живее в сладка вода.",
+	"page.fish.location.ocean": "{{fish}} живее в солена вода.",
+
+	"page.fish.filter.aquarium": "Филтър по дарение за аквариума",
+	"page.fish.aquarium.true": "Само дарени",
+	"page.fish.aquarium.false": "Само недарени",
+
+	"page.fish.aquarium.donated": "Дарил си това на Аквариума на Стардю.",
+	"page.fish.aquarium.not-donated": "Не си дарил това на Аквариума на Стардю.",
+
+	// Settings
+
+	"settings.theme": "Тема на интерфейса",
+	"settings.theme-desc": "Тази тема ще се използва за менюто на Алманаха.",
+
+	"theme.automatic": "Автоматична",
+	"theme.default": "По подразбиране",
+
+	"settings.button": "Позиция на бутона",
+	"settings.button-desc": "Когато не е изключен, ще бъде добавен бутон за отваряне на Алманаха в менюто на инвентара на тази позиция.",
+
+	"settings.button.Disabled": "Изключен",
+	"settings.button.LeftTop": "Горе вляво на менюто",
+	"settings.button.LeftBottom": "Долу вляво на менюто",
+	"settings.button.OrganizeRight": "Вдясно от 'Подреди'",
+	"settings.button.TrashRight": "Вдясно от кофата за боклук",
+	"settings.button.TrashDown": "Под кофата за боклук",
+
+	"settings.unlimited": "Неограничено",
+	"settings.days": "{{count}} дни",
+
+	"settings.available": "Алманахът е винаги наличен",
+	"settings.available-desc": "Когато е включено, Алманахът ще бъде винаги достъпен, независимо дали си получил физическо копие.",
+
+	"settings.island": "Островът е винаги наличен",
+	"settings.island-desc": "Когато е включено, Алманахът винаги ще показва съдържанието за Острова на джинджифила.",
+
+	"settings.magic": "Магическите страници са винаги налични",
+	"settings.magic-desc": "Когато е включено, магическите страници ще бъдат винаги достъпни и няма да изискват събитието с Магьосника.",
+
+	"settings.forecast-length": "Дължина на прогнозата",
+	"settings.forecast-length.desc": "Прогнозиране до толкова дни напред в бъдещето.",
+
+	"settings.weather.deterministic": "Използвай детерминирано време",
+	"settings.weather.deterministic-desc": "За да работи прогнозата в Алманаха, заменяме изчислението за утрешното време с такова, което използва предвидим източник на случайност. Ако това причинява проблеми, можеш да го изключиш тук. Това обаче ще деактивира разширената прогноза за времето.",
+
+	"settings.weather.rules": "Активирай правила за времето",
+	"settings.weather.rules-desc": "Правилата за времето налагат допълнителни ограничения върху случайната му поява. Стандартните правила осигуряват три последователни дъждовни дни в края на пролетта за по-лесно подобряване на лейката, както и поне един дъждовен и един слънчев ден всяка седмица.",
+
+	"settings.controls": "Контроли",
+
+	"settings.controls.almanac": "Отвори Алманаха",
+	"settings.controls.almanac-desc": "Натискането на този клавиш ще отвори интерфейса на Алманаха.",
+
+	"settings.enable": "Активирай страницата",
+	"settings.enable-desc": "Дали тази страница да бъде добавена към Алманаха.",
+
+	"settings.crops": "Страница: Дати за засаждане",
+
+	"settings.crops.preview": "Преглед на културите",
+	"settings.crops.preview-desc": "Когато прегледите са включени, задържането на мишката върху култура в раздела 'Дати за засаждане' ще ти покаже в календара на какъв етап ще бъде растението в даден ден.",
+
+	"settings.crops.preview.enable": "Активирай прегледите",
+
+	"settings.crops.preview.plantonfirst": "Засаждане винаги на първо число",
+	"settings.crops.preview.plantonfirst-desc": "Когато е включено, месечният преглед при избрана култура винаги ще започва засаждането от първо число, дори ако текущата дата е след това.",
+
+	"settings.crops.preview.sprite": "Икони за готова реколта",
+	"settings.crops.preview.sprite-desc": "Когато е включено, ще се използва изображение на самия продукт вместо финалния етап на растеж, за да се вижда по-лесно в кои дни реколтата е готова за прибиране.",
+
+	"settings.fortune": "Страница: Предсказания",
+
+	"settings.fortune.deterministic": "Използвай детерминиран късмет",
+	"settings.fortune.deterministic-desc": "За да работят прогнозите за късмет, заменяме изчислението за ежедневния късмет с предвидим източник. Ако това причинява проблеми, можеш да го изключиш, но това ще деактивира прогнозата за късмет.",
+
+	"settings.fortune.exact": "Показвай процент на късмет",
+	"settings.fortune.exact-desc": "Когато е включено, точният процент на ежедневния късмет ще се показва в подсказките на календара в секция 'Предсказания'.",
+
+	"settings.train": "Страница: Разписание на влаковете",
+
+	"settings.weather": "Страница: Прогноза за времето",
+
+	"settings.mines": "Страница: Подземията",
+
+	"settings.fish": "Страница: Риболов",
+	"settings.fish.show-tank": "Преглед в аквариум",
+	"settings.fish.show-tank-desc": "Когато е включено, страницата за риболов ще показва как изглежда всяка риба в аквариум.",
+
+	"settings.fish.decorate-tank": "Декорирай аквариума",
+	"settings.fish.decorate-tank-desc": "Когато е включено, прегледът в аквариум ще съдържа и няколко декоративни елемента освен рибата.",
+
+	"settings.fish.legendary": "Включи легендарни риби",
+	"settings.fish.legendary-desc": "Когато е включено, легендарните риби също ще бъдат вписани в Алманаха.",
+
+	"settings.notices": "Страница: Местни известия",
+
+	"settings.notices.trains": "Показвай влаковете",
+	"settings.notices.trains-desc": "Когато е включено, разписанието на влаковете ще се публикува в 'Местни известия'. Може да се използва като алтернатива на специалната страница за влаковете.",
+
+	"settings.notices.anniversaries": "Показвай годишнини",
+	"settings.notices.anniversaries-desc": "Когато е включено, сватбите и годишнините на всички фермери ще бъдат изброени в 'Местни известия'.",
+
+	"settings.notices.festivals": "Показвай фестивали",
+	"settings.notices.festivals-desc": "Когато е включено, фестивалите ще бъдат изброени в страницата 'Местни известия'.",
+	"settings.notices.gathering": "Показвай събирачество",
+	"settings.notices.gathering-desc": "Когато е включено, възможностите за събиране на диви плодове и предмети ще бъдат изброени в 'Местни известия'.",
+
+	"settings.notices.merchant": "Показвай пътуващия търговец",
+	"settings.notices.merchant-desc": "Когато е включено, посещенията на пътуващия търговец ще бъдат вписани в 'Местни известия'. Можеш да избереш да се показват и предметите, които ще продава.",
+	"settings.notices.merchant.Disabled": "Изключено",
+	"settings.notices.merchant.Visit": "Само посещения",
+	"settings.notices.merchant.Stock": "Посещения и стока",
+
+	"settings.notices.bookseller": "Показвай продавача на книги",
+	"settings.notices.bookseller-desc": "Когато е включено, посещенията на продавача на книги ще бъдат вписани в 'Местни известия'. Можеш да избереш да се показват и предметите, които ще продава.",
+	"settings.notices.bookseller.Disabled": "Изключено",
+	"settings.notices.bookseller.Visit": "Само посещения",
+	"settings.notices.bookseller.Stock": "Посещения и стока",
+
+	"settings.restore-state": "Възстанови предишно състояние",
+	"settings.restore-state.desc": "Когато е включено, Алманахът ще запомня на коя страница е бил затворен и ще се отвори отново на нея.",
+
+	"settings.cycle-time": "Време на редуване",
+	"settings.cycle-time.desc": "Когато трябва да се покажат няколко снимки за един и същи ден, всяка ще се вижда за толкова секунди.",
+
+	"settings.debug": "Дебъг режим",
+	"settings.debug.desc": "Когато е включено, ще се показва допълнителна информация, полезна за отстраняване на грешки. Дебъг режимът позволява и опресняване на данните с клавиш F5.",
+
+	// Events
+
+	// Pierre at Farm
+	"event.11022000.0": "Здравей, @. Виждам, че си се ${установил^установила} добре!",
+	"event.11022000.1": "Току-що пристигна пратката ми със Земеделския алманах за тази година. Тъй като си ${нов^нова} тук, реших да ти донеса едно копие.",
+	"event.11022000.2": "Получи копие от „Земеделски алманах“.",
+	"event.11022000.3": "Пълни са с полезна информация. Прогнози за времето. Ротация на културите. Разписанието на регионалните влакове. И други.",
+	"event.11022000.4": "Не пропускай да прочетеш какво можеш да отглеждаш. Когато си ${готов^готова} за засаждане, можеш да купиш семена от моя магазин.#$b#Семената на Пиер са *най-добрите*, които можеш да намериш.",
+
+	// Wizard at Farm
+	"event.11022002.0": "Здравей отново... @. Чаках те.#$b#Ето, бих искал да ти дам нещо.",
+	"event.11022002.1": "Получи копие от „Магически алманах“.",
+	"event.11022002.2": "Като фермер, прогнозите са ти познати.#$b#Този алманах съдържа духовна прогноза, написана лично от Уелвик.#$b#Ще ти помогне да се пазиш и да процъфтяваш.",
+	"event.11022002.3": "Сега, ако ме извиниш... имам много работа.",
+
+	// Willy at FishShop
+	"event.11022001.0": "Ахой!",
+	"event.11022001.1": "Към острова ли си ${тръгнал, момче^тръгнала, девойко}?",
+	"event.11022001.2": "Имам нещо, което може да ти потрябва. Заповядай.",
+	"event.11022001.3": "Получи копие от „Алманах на Фърнските острови“.",
+	"event.11022001.4": "Не е кой знае какво, но е страхотно да знаеш какво ще е времето. Някои риби излизат само в дъжда, знаеш ли?",
+	"event.11022001.5": "Е, по-добре да не те бавя. Приятен ден, @.",
+
+	// Times
+	// If this is set, we'll use a custom format for times displayed by Almanac
+	// rather than using the game's built-in getTimeOfDayString method.
+	// See https://stardewvalleywiki.com/Modding:Custom_languages#Data_format for
+	// details. (Specifically, TimeFormat in the data format table.)
+	"time-format": "",
+
+	// Locations
+
+	"location.WitchSwamp": "Блатото на вещицата",
+	"location.BugLand": "Леговище на мутанти",
+
+	"location.Caldera": "Остров на джинджифила (Калдера на вулкана)",
+	"location.IslandWest": "Западен Остров на джинджифила",
+	"location.IslandNorth": "Северен Остров на джинджифила",
+	"location.IslandSouth": "Южен Остров на джинджифила",
+	"location.IslandSouthEast": "Югоизточен Остров на джинджифила",
+	"location.IslandSouthEastCave": "Югоизточен Остров на джинджифила (Пещера)",
+	"location.IslandEast": "Източен Остров на джинджифила",
+
+	"location.Submarine": "Подводница",
+
+	"location.sub-any": "Всяко",
+	"location.sub-floor": "Етаж {{floor}}",
+
+	"location.Forest.River": "Река",
+	"location.Forest.Pond": "Езеро",
+
+	"location.Island.Ocean": "Океан",
+	"location.Island.Freshwater": "Сладка вода",
+
+	// Maps: Stardew Aquarium
+	"location.Custom_ExteriorMuseum": "Аквариумът на Стардю",
+
+	// Maps: Stardew Valley Expanded
+	"location.Custom_AdventurerSummit": "Връх на приключенците",
+	"location.Custom_BlueMoonVineyard": "Лозе Синя луна",
+	"location.Custom_BlueMoonVineyard.0": "Океан",
+	"location.Custom_BlueMoonVineyard.1": "Река",
+	"location.Custom_CrimsonBadlands": "Пурпурни земи",
+	"location.Custom_FableReef": "Приказен риф",
+	"location.Custom_ForestWest": "Западна гора Синдерсап",
+	"location.Custom_Highlands": "Високите земи",
+	"location.Custom_Highlands.0": "Руини",
+	"location.Custom_Highlands.1": "Река",
+	"location.Custom_HighlandsCavern": "Високите земи (Пещера)",
+	"location.Custom_JunimoWoods": "Гората на джунимотата",
+	"location.Custom_ShearwaterBridge": "Мост Шиъруотър",
+	"location.Custom_SpriteSpring2": "Извор на спрайтовете",
+	"location.Custom_GrampletonSuburbs": "Предградия на Грамплтън",
+	"location.Custom_GrampletonSuburbsTrainStation": "ЖП гара Предградия на Грамплтън",
+
+	// Maps: East Scarpe
+	"location.Custom_EastScarpe": "Ийст Скарп",
+	"location.Custom_EastScarpe.0": "Езеро",
+	"location.Custom_EastScarpe.1": "Приливни локви",
+	"location.Custom_EastScarpe.2": "Океан",
+	"location.Custom_ESDeepDark": "Ийст Скарп (Дълбока тъмнина)",
+	"location.Custom_ESDeepMountains": "Дълбоките планини",
+	"location.Custom_ESClearingHouse": "Лозе",
+	"location.Custom_ESMeadowFarm": "Ливадна ферма",
+	"location.Custom_ESVineyard": "Лозе",
+	"location.Custom_ESMineEntrance": "Ийст Скарп (Вход към мините)",
+	"location.Custom_ESSeaCave": "Ийст Скарп (Морска пещера)",
+	"location.Custom_ESSmugglerDen": "Леговище на контрабандисти",
+	"location.Custom_ESOrchard": "Черешова овощна градина",
+
+	// Maps: Ridgeside Village
+	"location.Custom_Ridgeside_RidgesideVillage": "Село Риджсайд",
+	"location.Custom_Ridgeside_RSVSewers": "Село Риджсайд (Канализация)",
+	"location.Custom_Ridgeside_Ridge": "Ридът",
+	"location.Custom_Ridgeside_RidgeFalls": "Водопади на рида",
+	"location.Custom_Ridgeside_RidgeForest": "Гора на рида",
+	"location.Custom_Ridgeside_RidgePond": "Езеро на рида",
+	"location.Custom_Ridgeside_SummitFarm": "Ферма на върха",
+
+	// Maps: Downtown Zuzu
+	"location.Custom_DTZ_Forest1": "Гора Зузу",
+	"location.Custom_DTZ_Forest2": "Гора Зузу",
+	//"location.Custom_DTZ_Forest1.1": "",
+	"location.Custom_DTZ_ResortSouth": "Курорт Кахуна",
+	"location.Custom_DTZ_ZuzuCityOasis1": "Пустиня Зузу",
+	"location.Custom_DTZ_Waterway": "Град Зузу",
+
+	// Maps: Dam
+	"location.Custom_Dam": "Язовирната стена",
+	//"location.Custom_Dam_AfforestationArea": "Dam Afforestation Area",
+	//"location.Custom_Dam_Cliff": "Cliff Near the Dam",
+	//"location.Custom_Dam_Road": "Road to the Dam",
+
+	// Maps: Flooded Cave
+	"location.Custom_Flooded_Cave": "Наводнената пещера",
+
+	// Maps: Tristan
+	"location.Custom_LK_SecretCave": "Тайната гора (Пещера)",
+	"location.Custom_LK_FairyPool": "Тайната гора (Езеро на феите)"
+}
