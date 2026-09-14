@@ -26,7 +26,7 @@
 
 ## Статус на публикуването
 - Пакетът е подготвен за GitHub release, но Nexus качването е умишлено изключено.
-- Nexus страницата вече съществува: `43127`. При следващо обновление добави `NEXUS_MOD_ID_UIINFOSUITE2ALT_BG` със стойност `43127` и `NEXUS_FILE_ID_UIINFOSUITE2ALT_BG` с текущия File Group ID, после включи Nexus публикуването в `release/mods.json`.
+- Nexus страницата на българския пакет вече съществува: `45619`. При следващо обновление добави `NEXUS_MOD_ID_UIINFOSUITE2ALT_BG` със стойност `45619` и `NEXUS_FILE_ID_UIINFOSUITE2ALT_BG` с текущия File Group ID, после включи Nexus публикуването в `release/mods.json`.
 
 ## Автор
 Превод: AcTePuKc
