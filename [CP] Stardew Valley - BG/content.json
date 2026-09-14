@@ -15,10 +15,10 @@
 
         // details section
         "LooseSprites": {
-            "AllowValues": "Billboard, ControllerMaps, Cursors, JojaCDForm, JunimoNote",
+            "AllowValues": "Billboard, ControllerMaps, Cursors, JojaCDForm, JunimoNote, MobileAtlas_manually_made, Movies",
             "AllowMultiple": true,
             "AllowBlank": true,
-            "Default": "Billboard, JojaCDForm, JunimoNote", // DISABLE: ControllerMaps, Cursors
+            "Default": "Billboard, Cursors, JojaCDForm, JunimoNote, MobileAtlas_manually_made, Movies", // DISABLE: ControllerMaps
             "Section": "Details"
         },
         "Maps": {
@@ -217,7 +217,7 @@
         // load loose sprites
         {
             "Action": "Load",
-            "Target": "LooseSprites/Billboard, LooseSprites/ControllerMaps, LooseSprites/Cursors, LooseSprites/JojaCDForm, LooseSprites/JunimoNote",
+            "Target": "LooseSprites/Billboard, LooseSprites/ControllerMaps, LooseSprites/Cursors, LooseSprites/JojaCDForm, LooseSprites/JunimoNote, LooseSprites/MobileAtlas_manually_made, LooseSprites/Movies",
             "FromFile": "assets/Content/{{Target}}.png",
             "Priority": "High",
             "When": {
@@ -250,6 +250,59 @@
                 "Language": "bg",
                 "BGInterface": true,
                 "Minigames |contains={{TargetWithoutPath}}": true
+            }
+        },
+        // restore Bulgarian Joja text after Seasonal Cute Characters edits the employee sprites
+        {
+            "Action": "EditImage",
+            "Target": "Minigames/jojacorps",
+            "FromFile": "assets/Content/Minigames/jojacorps.png",
+            "FromArea": { "X": 0, "Y": 600, "Width": 60, "Height": 20 },
+            "ToArea": { "X": 0, "Y": 600, "Width": 60, "Height": 20 },
+            "Priority": "Late",
+            "When": {
+                "Language": "bg",
+                "BGInterface": true,
+                "Minigames |contains=jojacorps": true
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Minigames/jojacorps",
+            "FromFile": "assets/Content/Minigames/jojacorps.png",
+            "FromArea": { "X": 255, "Y": 605, "Width": 150, "Height": 45 },
+            "ToArea": { "X": 255, "Y": 605, "Width": 150, "Height": 45 },
+            "Priority": "Late",
+            "When": {
+                "Language": "bg",
+                "BGInterface": true,
+                "Minigames |contains=jojacorps": true
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Minigames/jojacorps",
+            "FromFile": "assets/Content/Minigames/jojacorps.png",
+            "FromArea": { "X": 740, "Y": 605, "Width": 220, "Height": 45 },
+            "ToArea": { "X": 740, "Y": 605, "Width": 220, "Height": 45 },
+            "Priority": "Late",
+            "When": {
+                "Language": "bg",
+                "BGInterface": true,
+                "Minigames |contains=jojacorps": true
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Minigames/jojacorps",
+            "FromFile": "assets/Content/Minigames/jojacorps.png",
+            "FromArea": { "X": 0, "Y": 745, "Width": 1200, "Height": 30 },
+            "ToArea": { "X": 0, "Y": 745, "Width": 1200, "Height": 30 },
+            "Priority": "Late",
+            "When": {
+                "Language": "bg",
+                "BGInterface": true,
+                "Minigames |contains=jojacorps": true
             }
         },
 
