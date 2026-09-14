@@ -260,6 +260,77 @@
       },
       "description": "Bulgarian translation for Cloudy Skies.",
       "archiveExistingFile": false
+    },
+    {
+      "key": "better-crafting-main-bg",
+      "label": "Better Crafting - Bulgarian Translation",
+      "sourcePath": "mods/better-crafting/BetterCrafting",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_BETTER_CRAFTING_BG",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_BETTER_CRAFTING_MAIN_BG",
+      "nexusPublished": true,
+      "changelogPath": "mods/better-crafting/changelog.txt",
+      "nexusDescriptionPath": "mods/better-crafting/BetterCrafting.bbcode",
+      "fileGroupId": null,
+      "fileName": "Better Crafting - Bulgarian Translation",
+      "archiveBaseName": "Better-Crafting-BG",
+      "category": "main",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Better Crafting.",
+      "archiveExistingFile": false
+    },
+    {
+      "key": "better-crafting-buildings-bg",
+      "label": "Better Crafting: Buildings - Bulgarian Translation",
+      "sourcePath": "mods/better-crafting/BCBuildings",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_BETTER_CRAFTING_BG",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_BETTER_CRAFTING_BUILDINGS_BG",
+      "nexusPublished": true,
+      "changelogPath": "mods/better-crafting/changelog.txt",
+      "nexusDescriptionPath": "mods/better-crafting/BetterCrafting.bbcode",
+      "fileGroupId": null,
+      "fileName": "Better Crafting: Buildings - Bulgarian Translation",
+      "archiveBaseName": "Better-Crafting-Buildings-BG",
+      "category": "optional",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Better Crafting: Buildings.",
+      "archiveExistingFile": false
+    },
+    {
+      "key": "better-crafting-magic-workbench-bg",
+      "label": "Better Crafting: Magic Workbench - Bulgarian Translation",
+      "sourcePath": "mods/better-crafting/[CP] BetterCrafting - Magic Workbench",
+      "nexusGameDomain": "stardewvalley",
+      "nexusModIdSecret": "NEXUS_MOD_ID_BETTER_CRAFTING_BG",
+      "nexusFileIdSecret": "NEXUS_FILE_ID_BETTER_CRAFTING_MAGIC_WORKBENCH_BG",
+      "nexusPublished": true,
+      "changelogPath": "mods/better-crafting/changelog.txt",
+      "nexusDescriptionPath": "mods/better-crafting/BetterCrafting.bbcode",
+      "fileGroupId": null,
+      "fileName": "Better Crafting: Magic Workbench - Bulgarian Translation",
+      "archiveBaseName": "Better-Crafting-Magic-Workbench-BG",
+      "category": "optional",
+      "versionStrategy": {
+        "type": "manual"
+      },
+      "description": "Bulgarian translation for Better Crafting: Magic Workbench.",
+      "archiveExistingFile": false
+    }
+  ],
+  "releaseBundles": [
+    {
+      "key": "better-crafting-bg",
+      "label": "Better Crafting Bulgarian translations",
+      "modKeys": [
+        "better-crafting-main-bg",
+        "better-crafting-buildings-bg",
+        "better-crafting-magic-workbench-bg"
+      ]
     }
   ]
 }

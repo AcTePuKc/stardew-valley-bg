@@ -11,6 +11,19 @@ The Nexus release workflow packages only the matching entry. It refuses to
 upload if `nexusPublished` is not `true`, or if the configured Nexus game domain
 and `NEXUS_MOD_ID_*` secret do not pass the API preflight.
 
+## Publishing a bundle
+
+A `releaseBundles` entry can publish multiple archives from one GitHub Release.
+Use the tag `<bundle-key>-v<version>`; for example:
+
+```
+better-crafting-bg-v0.1.0
+```
+
+Each bundle member is packaged and uploaded independently. This is useful when
+one original Nexus page contains a main mod and optional companion files. A
+failure for one archive does not stop the other bundle members from uploading.
+
 ## First Nexus file
 
 Create the Nexus mod page first. Then set `nexusPublished` to `true` and add

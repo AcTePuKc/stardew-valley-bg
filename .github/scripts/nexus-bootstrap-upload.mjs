@@ -9,6 +9,7 @@ const filename = process.env.RELEASE_ASSET;
 const version = process.env.MOD_VERSION;
 const name = process.env.MOD_DISPLAY_NAME;
 const description = process.env.MOD_DESCRIPTION || '';
+const category = process.env.MOD_FILE_CATEGORY || 'main';
 
 for (const [key, value] of Object.entries({ apiKey, gameDomain, modPageId, filename, version, name })) {
   if (!value) throw new Error(`Missing required value: ${key}`);
@@ -39,9 +40,8 @@ if (!modId) throw new Error('Nexus mod page returned no API mod ID. No upload wa
 
 const files = await expectJson(await api(`/mods/${encodeURIComponent(modId)}/files`), 'Check existing Nexus files');
 const existingFiles = files?.data?.mod_files || [];
-if (existingFiles.length > 0) {
-  const ids = existingFiles.map((file) => `${file.name || 'file'}=${file.id}`).join(', ');
-  throw new Error(`Refusing bootstrap: this Nexus page already has file(s): ${ids}. Add the matching NEXUS_FILE_ID_* GitHub secret before retrying.`);
+if (existingFiles.some((file) => file.name === name)) {
+  throw new Error(`Refusing bootstrap: Nexus already has a file named '${name}'. Add the matching NEXUS_FILE_ID_* GitHub secret before retrying.`);
 }
 
 const stat = fs.statSync(filename);
@@ -99,7 +99,7 @@ const file = await expectJson(await api('/mod-files', {
     name,
     description,
     version,
-    file_category: 'main',
+    file_category: category,
     primary_mod_manager_download: false,
     allow_mod_manager_download: true,
     show_requirements_pop_up: false,

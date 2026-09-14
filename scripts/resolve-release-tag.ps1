@@ -13,7 +13,32 @@ $matches = @(
         $prefix = "$($mod.key)-v"
         if ($Tag.StartsWith($prefix, [System.StringComparison]::Ordinal)) {
             [PSCustomObject]@{
-                Mod = $mod
+                Release = $mod
+                Mods = @($mod)
+                Version = $Tag.Substring($prefix.Length)
+            }
+        }
+    }
+
+    foreach ($bundle in @($config.releaseBundles)) {
+        if ($null -eq $bundle) {
+            continue
+        }
+
+        $prefix = "$($bundle.key)-v"
+        if ($Tag.StartsWith($prefix, [System.StringComparison]::Ordinal)) {
+            $bundleMods = @($bundle.modKeys | ForEach-Object {
+                $bundleModKey = $_
+                $mod = $config.mods | Where-Object { $_.key -eq $bundleModKey } | Select-Object -First 1
+                if (-not $mod) {
+                    throw "Release bundle '$($bundle.key)' references unknown mod key '$bundleModKey'."
+                }
+                $mod
+            })
+
+            [PSCustomObject]@{
+                Release = $bundle
+                Mods = $bundleMods
                 Version = $Tag.Substring($prefix.Length)
             }
         }
@@ -21,22 +46,29 @@ $matches = @(
 )
 
 if ($matches.Count -ne 1 -or [string]::IsNullOrWhiteSpace($matches[0].Version)) {
-    throw "Unsupported release tag '$Tag'. Expected '<mod-key>-v<version>' for exactly one key in release\mods.json."
+    throw "Unsupported release tag '$Tag'. Expected '<mod-key>-v<version>' or '<release-bundle-key>-v<version>' for exactly one configured release."
 }
 
 $match = $matches[0]
-$mod = $match.Mod
+$items = @(
+    foreach ($mod in $match.Mods) {
+        [PSCustomObject]@{
+            key = $mod.key
+            label = $mod.label
+            version = $match.Version
+            nexusPublished = [bool]$mod.nexusPublished
+            nexusGameDomain = $mod.nexusGameDomain
+            nexusModIdSecret = $mod.nexusModIdSecret
+            nexusFileIdSecret = $mod.nexusFileIdSecret
+        }
+    }
+)
 
 if (-not $env:GITHUB_OUTPUT) {
-    Write-Output "key=$($mod.key)"
+    ConvertTo-Json -InputObject $items -Depth 4
     Write-Output "version=$($match.Version)"
     exit 0
 }
 
-Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "key=$($mod.key)"
-Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "version=$($match.Version)"
-Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "label=$($mod.label)"
-Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "nexus_published=$($mod.nexusPublished.ToString().ToLowerInvariant())"
-Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "nexus_game_domain=$($mod.nexusGameDomain)"
-Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "nexus_mod_id_secret=$($mod.nexusModIdSecret)"
-Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "nexus_file_id_secret=$($mod.nexusFileIdSecret)"
+$itemsJson = ConvertTo-Json -InputObject $items -Compress -Depth 4
+Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "items=$itemsJson"
