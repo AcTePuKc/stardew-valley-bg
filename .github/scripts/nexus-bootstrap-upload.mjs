@@ -41,7 +41,8 @@ if (!modId) throw new Error('Nexus mod page returned no API mod ID. No upload wa
 const files = await expectJson(await api(`/mods/${encodeURIComponent(modId)}/files`), 'Check existing Nexus files');
 const existingFiles = files?.data?.mod_files || [];
 if (existingFiles.some((file) => file.name === name)) {
-  throw new Error(`Refusing bootstrap: Nexus already has a file named '${name}'. Add the matching NEXUS_FILE_ID_* GitHub secret before retrying.`);
+  console.log(`Nexus already has a file named '${name}'; skipping bootstrap for this release.`);
+  process.exit(0);
 }
 
 const stat = fs.statSync(filename);

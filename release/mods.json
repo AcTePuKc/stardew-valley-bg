@@ -283,7 +283,7 @@
     },
     {
       "key": "better-crafting-buildings-bg",
-      "label": "Better Crafting: Buildings - Bulgarian Translation",
+      "label": "Better Crafting Buildings - Bulgarian Translation",
       "sourcePath": "mods/better-crafting/BCBuildings",
       "nexusGameDomain": "stardewvalley",
       "nexusModIdSecret": "NEXUS_MOD_ID_BETTER_CRAFTING_BG",
@@ -292,7 +292,7 @@
       "changelogPath": "mods/better-crafting/changelog.txt",
       "nexusDescriptionPath": "mods/better-crafting/BetterCrafting.bbcode",
       "fileGroupId": null,
-      "fileName": "Better Crafting: Buildings - Bulgarian Translation",
+      "fileName": "Better Crafting Buildings - Bulgarian Translation",
       "archiveBaseName": "Better-Crafting-Buildings-BG",
       "category": "optional",
       "versionStrategy": {
@@ -303,7 +303,7 @@
     },
     {
       "key": "better-crafting-magic-workbench-bg",
-      "label": "Better Crafting: Magic Workbench - Bulgarian Translation",
+      "label": "Better Crafting Magic Workbench - Bulgarian Translation",
       "sourcePath": "mods/better-crafting/[CP] BetterCrafting - Magic Workbench",
       "nexusGameDomain": "stardewvalley",
       "nexusModIdSecret": "NEXUS_MOD_ID_BETTER_CRAFTING_BG",
@@ -312,7 +312,7 @@
       "changelogPath": "mods/better-crafting/changelog.txt",
       "nexusDescriptionPath": "mods/better-crafting/BetterCrafting.bbcode",
       "fileGroupId": null,
-      "fileName": "Better Crafting: Magic Workbench - Bulgarian Translation",
+      "fileName": "Better Crafting Magic Workbench - Bulgarian Translation",
       "archiveBaseName": "Better-Crafting-Magic-Workbench-BG",
       "category": "optional",
       "versionStrategy": {
