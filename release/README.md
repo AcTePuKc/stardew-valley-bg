@@ -40,4 +40,12 @@ Treat this as a release checklist item. No update tag should be created until
 both the page secret (`NEXUS_MOD_ID_*`) and the existing-file secret
 (`NEXUS_FILE_ID_*`) are present.
 
+## Nexus file names
+
+Nexus validates the display name used for a new file more strictly than
+GitHub does. Keep `fileName` short and use only ASCII letters, digits, spaces,
+underscores, apostrophes, parentheses, periods, and hyphens. In particular,
+do not use a colon (`:`). The human-facing `label` and the GitHub archive name
+may remain more descriptive.
+
 The sole required GitHub secret is `NEXUSMODS_API_KEY`.
