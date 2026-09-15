@@ -113,8 +113,8 @@ jobs:
         if: ${{ matrix.mod.nexusPublished && steps.nexus.outputs.has_file == 'false' }}
         env:
           NEXUS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
-          NEXUS_GAME_DOMAIN: ${{ steps.mod.outputs.nexus_game_domain }}
-          NEXUS_MOD_ID: ${{ secrets[steps.mod.outputs.nexus_mod_id_secret] }}
+          NEXUS_GAME_DOMAIN: ${{ matrix.mod.nexusGameDomain }}
+          NEXUS_MOD_ID: ${{ secrets[matrix.mod.nexusModIdSecret] }}
           RELEASE_ASSET: ${{ steps.package.outputs.archive_path }}
           MOD_VERSION: ${{ steps.package.outputs.version }}
           MOD_DISPLAY_NAME: ${{ steps.package.outputs.file_name }}
