@@ -6,8 +6,11 @@
 Пакетът съдържа готови файлове за папката `UIInfoSuite2Alt\\i18n`.
 
 ## Съвместимост
-- Версия на превода: `0.5.2`
-- Синхронизиран с: `UI Info Suite 2 Alternative 2.8.35`
+- Версия на превода: `0.5.3`
+- Синхронизиран с: `UI Info Suite 2 Alternative 2.9.1`
+
+## Промени в 0.5.3
+- Добавени са `Button.ResetToDefaults` и `Confirm.ResetToDefaults`.
 
 ## Промени в 0.5.2
 - Добавен е новият низ `ShowBirthdaysForUnmetVillagers`.

@@ -239,6 +239,8 @@
   "DisplayCalendarAndBillboard": "Бутон за Календар/Обяви",
   "LauncherDrawer.EntryName": "UIIS2 Alt.",
   "LauncherDrawer.EntryDescription": "Отвори настройките на UI Info Suite 2 Alt",
+  "Button.ResetToDefaults": "Възстановяване на всички настройки",
+  "Confirm.ResetToDefaults": "Всички настройки, включително клавишните комбинации, ще бъдат възстановени до стойностите си по подразбиране.",
   "ShowHeartFills": "Запълване на сърцата",
   //Settings - Show icons
   "ShowBirthdayIcon": "Икона за рожден ден",

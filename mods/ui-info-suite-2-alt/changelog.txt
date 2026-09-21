@@ -1,1 +1,1 @@
-Initial changelog placeholder. Add one release note per line before publishing an update.
+0.5.3: Синхронизиран с UI Info Suite 2 Alternative 2.9.1; добавени са низовете за нулиране на всички настройки.
