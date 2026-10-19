@@ -6,8 +6,11 @@
 Пакетът съдържа готовия файл `bg.json` за папката `UIInfoSuite2Alt\\i18n`.
 
 ## Съвместимост
-- Версия на превода: `0.5.3`
-- Синхронизиран с: `UI Info Suite 2 Alternative 2.9.1`
+- Версия на превода: `0.5.5`
+- Синхронизиран с: `UI Info Suite 2 Alternative 2.9.2`
+
+## Промени в 0.5.5
+- Добавен е преводът на `FlexibleBuildingStatus`.
 
 ## Промени в 0.5.3
 - Добавени са `Button.ResetToDefaults` и `Confirm.ResetToDefaults`.

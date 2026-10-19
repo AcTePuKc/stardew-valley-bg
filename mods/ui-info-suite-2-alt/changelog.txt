@@ -1,1 +1,2 @@
+0.5.5: Синхронизиран с UI Info Suite 2 Alternative 2.9.2; добавен е преводът на FlexibleBuildingStatus.
 0.5.3: Синхронизиран с UI Info Suite 2 Alternative 2.9.1; добавени са низовете за нулиране на всички настройки.

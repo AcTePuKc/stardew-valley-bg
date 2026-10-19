@@ -278,6 +278,7 @@
   "QuestLastDayTooltipHeader": "Куест(ове) в последния ден:",
   "ShowWeddingReminder": "Показване на напомняне за сватба",
   "WeddingTomorrow": "= Утре е сватбата ти с {{name}}! =\n\nПреоблечи се със сватбените си дрехи преди лягане.\nЦеремонията започва веднага щом се събудиш.",
+  "FlexibleBuildingStatus": "Робин ще завърши строежа на {0} до {1} дни.",
   "ShowGoldenWalnutCount": "Брой Златни орехи",
   "ShowGoldenWalnutAnywhere": "Показване навсякъде",
   "GoldenWalnutFadeOut": "Скриване, когато не е посочено",
