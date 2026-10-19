@@ -118,7 +118,7 @@ jobs:
           RELEASE_ASSET: ${{ steps.package.outputs.archive_path }}
           MOD_VERSION: ${{ steps.package.outputs.version }}
           MOD_DISPLAY_NAME: ${{ steps.package.outputs.file_name }}
-          MOD_DESCRIPTION: ${{ steps.package.outputs.description }}
+          MOD_DESCRIPTION: ${{ steps.package.outputs.changelog_description }}
           MOD_FILE_CATEGORY: ${{ steps.package.outputs.category }}
         run: node .github/scripts/nexus-bootstrap-upload.mjs
 
@@ -131,7 +131,7 @@ jobs:
           filename: ${{ steps.package.outputs.archive_path }}
           version: ${{ steps.package.outputs.version }}
           display_name: ${{ steps.package.outputs.file_name }}
-          description: ${{ steps.package.outputs.description }}
+          description: ${{ steps.package.outputs.changelog_description }}
           category: ${{ steps.package.outputs.category }}
           archive_existing_version: false
           update_mod_version: true

@@ -49,6 +49,19 @@ function Resolve-Version {
 $version = Resolve-Version -ModConfig $mod -RepoRoot $repoRoot -VersionOverride $VersionOverride
 $sourcePath = Join-Path $repoRoot $mod.sourcePath
 
+$nexusDescription = [string]$mod.description
+if ($mod.changelogPath) {
+    $changelogPath = Join-Path $repoRoot $mod.changelogPath
+    if (Test-Path -LiteralPath $changelogPath) {
+        $latestChangelogEntry = Get-Content -LiteralPath $changelogPath |
+            Where-Object { $_.Trim().Length -gt 0 } |
+            Select-Object -First 1
+        if ($latestChangelogEntry) {
+            $nexusDescription = $latestChangelogEntry.Trim()
+        }
+    }
+}
+
 if (-not (Test-Path -LiteralPath $sourcePath)) {
     throw "Source path '$sourcePath' does not exist."
 }
@@ -95,6 +108,7 @@ if ($env:GITHUB_OUTPUT) {
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "category=$($mod.category)"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "label=$($mod.label)"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "description=$($mod.description)"
+    Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "changelog_description=$nexusDescription"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "archive_existing_file=$($mod.archiveExistingFile.ToString().ToLowerInvariant())"
     Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "nexus_published=$($mod.nexusPublished.ToString().ToLowerInvariant())"
 }

@@ -49,3 +49,7 @@ do not use a colon (`:`). The human-facing `label` and the GitHub archive name
 may remain more descriptive.
 
 The sole required GitHub secret is `NEXUSMODS_API_KEY`.
+
+For Nexus file uploads, the first non-empty line in the configured
+`changelogPath` is used as the file description. The general `description`
+field remains the fallback when no changelog entry is available.
